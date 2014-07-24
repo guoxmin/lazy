@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="GBK">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<style type="text/css" media="screen">
+		*{ margin:0; padding:0;}
+		div{ padding:500px 0; border:1px solid #ccc;}
+	</style>
+</head>
+<body id="Jbody">
+	<div id="test1">
+
+		<img width="300" height="200" src="http://www1.pconline.com.cn/images/blank.gif" #src="http://dummyimage.com/300x200/ccc/fff" alt="" />
+	</div>
+	<div id="test2">
+		
+		<img width="300" height="200" src="http://www1.pconline.com.cn/images/blank.gif" #src="http://dummyimage.com/400x200/ccc/fff" alt="" />
+	</div>
+	<div id="test3">
+		
+		<img width="300" height="200" src="http://www1.pconline.com.cn/images/blank.gif" #src="http://dummyimage.com/500x200/ccc/fff" alt="" />
+	</div>
+	<script type="text/javascript" src="js/wap.lazy.js"></script>
+	<script type="text/javascript">
+	var jsList_ = [
+		{id:"test1",js:function(){}},
+		{id:"test2",js:function(){}}
+	];
+
+	var xx = Lazy.create({
+	    lazyId:"Jbody",
+	    jsList:jsList_,
+	    trueSrc:'#src',
+	    offset:1,
+	    imgLoad:function(elem,width,height){
+	    	elem.style.border = "10px solid #f00";
+	    }
+	});
+	Lazy.init(xx);
+
+	</script>
+</body>
+</html>
